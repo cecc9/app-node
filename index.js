@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
+const path = require("path");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -13,9 +14,10 @@ morgan.token("body", function (req, res) {
     }
 });
 
-app.use(express.static("dist"));
+// app.use(express.static("dist"));
 app.use(express.json());
 app.use(cors());
+app.use(express.static(path.join(__dirname, "dist")));
 app.use(morgan(":method -- :url -- :status -- :response-time ms :body"));
 // haciendo una modificacion
 
