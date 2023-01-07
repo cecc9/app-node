@@ -31,9 +31,9 @@ function createId() {
 
 const date = new Date();
 
-app.get("/", function (req, res) {
-    res.send("<h2>Hi, this is my first app node</h2>");
-});
+// app.get("/", function (req, res) {
+//     res.send("<h2>Hi, this is my first app node</h2>");
+// });
 
 app.get("/info", (req, res) => {
     res.send(`<div>
