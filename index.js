@@ -17,6 +17,7 @@ app.use(express.json());
 app.use(cors());
 app.use(morgan(":method -- :url -- :status -- :response-time ms :body"));
 app.use(express.static("dist"));
+// haciendo una modificacion
 
 let persons = [
     { id: 1, name: "cristian", number: 234234 },
